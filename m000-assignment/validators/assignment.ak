@@ -1,72 +1,73 @@
 // validators/tests_validator.ak
 
 // -------------------------
-// Tests for Boolean operations
+// Boolean operations
 // -------------------------
-test boolean_operations() {
+test bool_test() {
   let a = True
   let b = False
 
-  // AND
   trace @"Testing AND operation"
-  ( a && b ) == False
+  let _ = ( a && b ) == False
 
-  // OR
   trace @"Testing OR operation"
-  ( a || b ) == True
+  let _ = ( a || b ) == True
 
-  // NOT
   trace @"Testing NOT operation"
   !a == False
+  // last expression evaluates to True
 }
 
 // -------------------------
-// Tests for Integer arithmetic
+// Integer arithmetic
 // -------------------------
-test integer_arithmetic() {
+test int_test() {
   let x = 7
   let y = 3
 
   trace @"Testing addition"
-  x + y == 10
+  let _ = x + y == 10
 
   trace @"Testing subtraction"
-  x - y == 4
+  let _ = x - y == 4
 
   trace @"Testing multiplication"
-  x * y == 21
+  let _ = x * y == 21
 
-  trace @"Testing division"
+  trace @"Testing integer division"
   x / y == 2
-  // integer division
+  // last expression evaluates to True
 }
 
 // -------------------------
-// Tests for Comparison operators
+// Comparison operators
 // -------------------------
-test comparison_operators() {
+test comparison_test() {
   let p = 5
   let q = 10
 
   trace @"Testing less than"
-  p < q == True
+  let _ = p < q == True
 
   trace @"Testing greater than"
-  q > p == True
+  let _ = q > p == True
 
   trace @"Testing equality"
-  p == 5 == True
+  let _ = p == 5 == True
 
   trace @"Testing inequality"
   p != q == True
+  // last expression evaluates to True
 }
 
 // -------------------------
-// Optional: Combined test with trace
+// Combined boolean + arithmetic
 // -------------------------
 test combined_test() {
   let a = True
   let x = 4
+
   trace @"Combined boolean and arithmetic test"
   ( a && x + 1 == 5 ) == True
+  // last expression evaluates to True
 }
